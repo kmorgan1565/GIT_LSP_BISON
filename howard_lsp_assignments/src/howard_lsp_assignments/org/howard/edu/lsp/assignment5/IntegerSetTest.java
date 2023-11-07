@@ -7,12 +7,12 @@ import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
 
-public class IntegerSetTest {
+public class IntegerSetTest {  //
 	
-	private IntegerSet set;
+	private IntegerSet set; //
 	
 	@Before
-	public void setUp() {
+	public void setUp() { //
 		ArrayList<Integer>list = new ArrayList<Integer>();
 		list.add(3);
 		list.add(5);
@@ -52,7 +52,7 @@ public class IntegerSetTest {
 
 	@Test
 	public void testContains() {
-	
+
 	}
 	
 	@Test
@@ -82,6 +82,7 @@ public class IntegerSetTest {
 	}
 
 	@Test
+	@DisplayName("Test case for Add")
 	public void testAdd() {
 		set.addItem(10);
 		set.addItem(39);
@@ -89,13 +90,15 @@ public class IntegerSetTest {
 	}
 
 	@Test
+	@DisplayName("Test case for Remove")
 	public void testRemove() {
 	set.removeItem(5);
 	assertEquals(4, set.length());
 	}
 
 	@Test
-	public void testUnion() {
+	@DisplayName("Test case for Union")
+	public void testUnion() {		//
 		ArrayList<Integer>list = new ArrayList<Integer>();
 		list.add(20);
 		list.add(21);
@@ -106,6 +109,7 @@ public class IntegerSetTest {
 	}
 
 	@Test
+	@DisplayName("Test case for Intersect")
 	public void testIntersect() {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		list.add(2);
@@ -117,6 +121,7 @@ public class IntegerSetTest {
 	}
 
 	@Test
+	@DisplayName("Test case for Difference")
 	public void testDiff() {
 		ArrayList<Integer> list = new ArrayList<Integer>();
         list.add(2);
@@ -128,6 +133,7 @@ public class IntegerSetTest {
 	}
 
 	@Test
+	@DisplayName("Test case for Complement")
 	public void testComplement() {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 			list.add(3);
@@ -143,6 +149,7 @@ public class IntegerSetTest {
 	}
 
 	@Test
+	@DisplayName("Test case for isEmpty")
 	public void testIsEmpty() {
 		set.clear();
 		assertTrue(0 == set.length());
@@ -151,6 +158,7 @@ public class IntegerSetTest {
 	}
 
 	@Test
+	@DisplayName("Test case for toString")
 	public void testToString() {
 		assertEquals("[3, 5, 8, 2, 18]", set.toString());
 	}
